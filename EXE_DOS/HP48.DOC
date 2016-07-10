@@ -1,0 +1,183 @@
+			      ÉÍÍÍÍÍÍÍÍÍÍÍÍ»
+			      º HP-DESKTOP ºÛ
+			      ÈÍÍÍÍÍÍÍÍÍÍÍÍ¼Û
+				ßßßßßßßßßßßßß
+			   Version 4.0 du 30/10/93
+
+		  Copyright 1993 ROUSSEAU Karl alias HPZERO
+
+
+		     ÉÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ»
+		     º CETTE VERSION N'EST PAS FINALE   º
+		     º IL MANQUE CERTAINES RUBRIQUES    º
+		     º MAIS LE LOGICIEL EST INDEPENDANT º
+		     º DE CES DERNIERES.                º
+		     ÇÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¶
+		     º BIENTOT UNE ADAPTATION SOUS      º
+		     º       << WINDOWS 3.1 >>          º
+		     ÈÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¼
+
+
+
+ş PRESENTATION
+   ßßßßßßßßßßßß
+  HP-DESKTOP est un SHAREWARE, sa diffusion est autoris‚e mais une contribution
+envers son auteur n'est pas obligatoire sauf si vous consid‚rez que mon oeuvre
+en vaut la peine. (Je compte sur vous !)
+
+  HP-DESKTOP comprend 1 fichier ZIP contenant :
+   Ú
+   ³ HP48.EXE   l'‚xecutable
+   ³ HP48.INI   le fichier de configuration
+   ³ HP48.DOC   la DOC ici pr‚sente
+   À
+  Il peut cr‚er des fichiers : HP_BIBLE,HP_STAT.PRN,HP_LISTE.PRN,LISTE_HP.$$$
+
+  S'il vous manque un de ces fichiers, vous pouvez le t‚l‚charger sur :
+
+	  . THE DELIRIUM TREMENS BBS          (ANGERS) t‚l : 41 66 95 19
+	    Acc‚s par MODEM > 2400 bauds
+	  . THE ELECTRON BBS                  (PARIS)  t‚l : 16 1 69 39 46 30
+	    Acc‚s par MODEM > 2400 bauds
+
+	  . JEF (minitel & protocol BBT)      (PARIS)  t‚l : 16 1 47 95 28 10
+	  . RTC ONE (idem)                    (PARIS)  t‚l : 16 1 48 70 10 29
+
+  Vous pouvez me laisser un message sur les BBS en ‚crivant … Karl ROUSSEAU
+  mais aussi vous pouvez laisser un message sur minitel en BAL HPZERO.
+
+  BUT : HP-DESKTOP est un logiciel permettant de g‚rer les programmes du
+calculateur HP48 s‚rie S/Sx/G/Gx. Ainsi il permet de r‚cevoir et de transmettre
+les programmes via le protocole XMODEM ou YMODEM. Il faut savoir que par rapport
+au protocole KERMIT, ces derniers vont en moyenne 6 fois plus vite !! Bien sur
+il vous faut le protocole X ou YMODEM sur HP48. Je vous conseille :
+	. XHP de ELENDRIL
+	. XYmodem dans la disquette HORN7
+HP-DESKTOP permet aussi de d‚crire ses fichiers dans une base de donn‚es puis de
+faire une recherche, un tri selon plusieurs critŠres et d'imprimer le tout.
+
+ş MATERIEL
+   ßßßßßßßß
+  Pour utiliser HP-DESKTOP il vous faut :
+       - un PC avec un ‚cran monochrome (25 lignes)
+	 ou couleur CGA (25 lignes) ou EGA (43 lignes) ou VGA (50 lignes).
+       - un PC disposant d'une sortie s‚rie.
+       - un cable reliant votre PC et votre HP.
+       - ‚ventuellement une HP48.
+
+ş INSTALLATION
+   ßßßßßßßßßßßß
+  Tout d'abord cr‚er sur votre disque dur ou une disquette, le r‚pertoire HP48 :
+       tapez A: ou C: puis MD HP48
+  Puis allez dans HP48 : CD HP48
+  D‚compacter le fichier HP48DSK.ZIP en utilisant PKUNZIP v.204g :
+       tapez PKUNZIP A:HP48DSK.ZIP
+  Editez HP48.INI et changez les paramŠtres s'ils ne conviennent pas.
+  Enfin tapez HP48.
+
+  Rem : Tous les sous-r‚pertoires de HP48 seront reconnues comme des groupes de
+	programmes HP48 s'ils en contiennent.
+
+ş AIDE
+   ßßßß
+  A l'int‚rieur du programme HP-DESKTOP vous pouvez avoir une aide en ligne en
+tapant F1 puis … nouveau F1 s'il y a plusieurs pages.
+
+ş TRUCS & ASTUCES
+   ßßßßßßßßßßßßßßß
+  . La touches ESC permet de sortir de tous les MENUs et de HP-DESKTOP.
+  . S'il y a un problŠme d'affichage, v‚rifiez que vous ˆtes en 25 lignes en
+    regardant dans le fichier HP48.INI le paramŠtre SET LINE 25.
+  . Il faut imp‚rativement respecter l'ordre des paramŠtres dans HP48.INI
+    soit SET PATH C:\HP48   (r‚pertoire ou est HP-DESKTOP)
+	 SET PORT COM1      (nø port de communication avec la HP48)
+	 SET BAUD 9600      (vitesse en bits/secondes)
+	 SET MODE Xmodem    (le protocole Xmodem ou Ymodem)
+	 SET SIZE 128       (la longueur du paquet : 128 ou 1024)
+	 SET LINE 25        (le nb de lignes … l'‚cran)
+  . La bibliothŠque appel‚e HP_BIBLE contient la base de donn‚es.
+    Sa structure est
+      Ligne   = RECORD                 { Structure de la Bible HP }
+		  Nom  : String [12];
+		  Cata : String [8];
+		  Aute : String [8];
+		  Note : String [2];   {AB,B,TB,E!}
+		  Id   : String [3];   {NEW,LIB,RPL,EXT,ASM,GRB}
+		  Etat : String [4];   {BIN,ASC,BUG,nølib}
+		  Size : LongInt;
+		  Date : LongInt;
+		  Help : String [192];
+		END;
+  . Lors de la recherche vous pouvez mettre plusieurs critŠres dans diff‚rents
+    champs pour cibler la recherche.
+  . Lors de la recherche vous pouvez rechercher les fichiers n'ayant pas de
+    description dans le champs AIDE (les 4 lignes) en tapant un seul blanc dans
+    la 1ere ligne du champs AIDE.
+  . Le champs NOTE peut contenir 6 valeurs diff‚rentes RECONNUES :
+       NUL (  ),Assez Bien (AB),Bien (B ),Tr‚s Bien (TB),Excellent (E!).
+    Ces valeurs sont reconnues dans les statisques.
+  . Le champs ID peut contenir par exemple :
+       LIB (librairie),RPL,EXT (Externals),ASM (Saturn),GRB (Image),...
+    LIB est reconnue dans STATISQUE.
+  . Dans statisque : la valeur (ä) correspond … la somme de toutes les tailles
+    des fichiers et la valeur en dessous … la taille prise sur disque car le
+    systŠme MS/DOS r‚serve des clusters de 2048c pour les fichiers donc un
+    fichier de taille < 2048c prendra 2048c sur disque.
+    Pour rem‚dier … cela, vous pouvez utilisez un DOUBLEUR de disque qui r‚duit
+    la taille des clusters en fonction des programmes. (divise par 8 ou 16)
+  . Pour acc‚lerer les acc‚s au disque, vous pouvez utilisez un CACHE DISQUE
+    comme NORTON CACHE ou PC-CACHE.
+  . L'impression g‚nŠre un fichier que vous pouvez imprimer ou retravailler.
+    Il se nomme HPLISTE.PRN et pour l'imprimer tapez sous DOS :
+	 COPY HPLISTE.PRN PRN:
+  . La STATISTIQUE est g‚n‚r‚e dans un fichier nomm‚ STATS.PRN
+  . Le TRI (QUICK SORT) peut ˆtre arrˆt‚ sans problŠme par ESC.
+  . Le TRI peut laisser des cases vides: elles ne sont pas ‚chang‚es c'est tout
+  . La MAJ de la base de donn‚es reconnait automatiquement les librairies.
+  . Si la communication ne marche pas alors reessayez en changeant le
+    port COM ou v‚rifiez la HP48 (wire 9600 binary none 3 1).
+  . Deux sous-r‚pertoires du r‚pertoire d'installation ne doivent pas avoir le
+    mˆme nom sinon HP-DESKTOP mettera les programmes dans le mˆme catalogue.
+  . Dernier point : aprŠs un message d'erreur, il faut frapper une touche.
+  
+  ^
+ /!\  Si vous effacez HP_BIBLE alors vous perdez la base de donn‚es. Je vous
+/ÄÄÄ\ conseille de faire des sauvegardes de ce fichier le plus souvent possible.
+  . AMELIORATIONS :
+     - Transferts interruptibles par ESC
+     - Impression correcte : #0 devenu #32
+     - Touches INS & SUP chang‚es par Page Up & Page Down.
+     - S‚lection par ENTREE fait sauter au fichier suivant.
+     - Saut sur le 1er fichier dont sa 1ere lettre est la mˆme que celle tap‚e
+       au clavier. (Touches : de 'A' … 'Z' & 'a' … 'z')
+
+ş INFORMATIONS
+   ßßßßßßßßßßßß
+  Si vous appr‚ciez l'un de mes programmes ou si vous d‚sirez avoir des
+informations compl‚mentaires, n'h‚sitez pas … me contacter.
+
+  Ce programme a ‚t‚ entiŠrement (sauf la librairie de communication en
+assembleur que je n'ai pas voulut r‚‚crire) ‚crit par ROUSSEAU Karl en TURBO
+PASCAL. Cela a demand‚ pas mal de temps et je pense que le r‚sultat est
+satisfaisant. Je totalise un peu plus de 4000 lignes bien pleines.
+Il est quand mˆme trŠs ‚tonnant de voir la taille du fichier ‚xecutable par
+rapport … ce qu'il fait !! Je commence … adapter cette version en VISUAL BASIC
+sous WINDOWS 3.1 alors si vous trouvez des BUGs ou des am‚liorations, ‚crivez
+moi.
+
+ş GREETINGS
+   ßßßßßßßßß
+     to : OLIVIER GIRARD (SYSOP de THE DELIRIUM BBS)
+	  OLIVIER        (SYSOP de ELECTRON pour avoir eu le 1er RUNTIME error)
+	  BORLAND        (TURBO PASCAL)
+	  AKIRA          (pr‚curseur d'une version sur MAC)
+	  ELENDRIL       (pour son Xmodem sur HP48)
+	  BARBARIN V.    (pour sa HP48G : Test OK avec Xmodem int‚gr‚)
+	  HAMELIN F-R
+	  GUERIN F
+	  MULLER Olivier (qui utilisait DIR/S pour ses descriptions)
+	  PATRICE75      (qui a appr‚ci‚ ce programme et son originalit‚ )
+	  BOOTY          (qui n'aimait pas les touches INS & SUP !)
+	  HPDREAM        (qui m'a cit‚ dans ses GREETINGS !!)
+	  ...
+     et tous les HPistes.
