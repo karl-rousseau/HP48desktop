@@ -2,7 +2,7 @@
 
 ## Historique
 
-![UART 8250](https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Hewlett-Packard_48GX_Scientific_Graphing_Calculator.jpg/200px-Hewlett-Packard_48GX_Scientific_Graphing_Calculator.jpg) ![RS232 cable](gfx/serial_cable_diagram.gif)
+![UART 8250](https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Hewlett-Packard_48GX_Scientific_Graphing_Calculator.jpg/200px-Hewlett-Packard_48GX_Scientific_Graphing_Calculator.jpg) ![RS232 cable](GFX/serial_cable_diagram.gif)
 
 Ce vieux projet sous DOS a été fait à l'époque pour plusieurs raisons:
 - il était difficile de classer toutes les archives du [calculateur HP-48S/Sx/G/Gx](https://en.wikipedia.org/wiki/HP_48_series)
@@ -29,11 +29,11 @@ Le logiciel se base sur les composants de l'époque que l'on trouvait sur IBM/PC
 
 | Gestionnaire du port série RS232 | Controlleur d'IRQ |
 | ---------- | -------- |
-| ![UART 8250](gfx/ins8250-uart.jpg) | ![Intel 8259](gfx/intel8259_interrupt_controller.jpg) |
+| ![UART 8250](GFX/ins8250-uart.jpg) | ![Intel 8259](GFX/intel8259_interrupt_controller.jpg) |
 | uart 8250  | intel 8259 |
 
 Voici un diagramme simple des entrées/sorties de l'UART:
-![UART I/O](gfx/ins8250-uart-diagram.gif)
+![UART I/O](GFX/ins8250-uart-diagram.gif)
 
 et utilisé dans le code suivant ces registres:
 
@@ -58,15 +58,15 @@ Et sur la partie restante, on a accès à une fenêtre de dialogue ou d'affichag
 
 | F1: l'écran d'aide  | et F1 pour la suite de l'aide ... |
 | -------- | -------- |
-| ![screenshot1](gfx/screenshot01_help.png) | ![screenshot2](gfx/screenshot02_more_help.png) |
+| ![screenshot1](GFX/screenshot01_help.png) | ![screenshot2](GFX/screenshot02_more_help.png) |
 | ALT-C pour le paramétrage général | ALT-R pour la recherche & l'édition de fiche |
-| ![screenshot3](gfx/screenshot03_configure.png) | ![screenshot4](gfx/screenshot04_edit_card.png) |
+| ![screenshot3](GFX/screenshot03_configure.png) | ![screenshot4](GFX/screenshot04_edit_card.png) |
 | des statistiques ... | avec des stats sur les libs ... |
-| ![screenshot5](gfx/screenshot05_stats_header.png) | ![screenshot6](gfx/screenshot06_stats_references.png) |
+| ![screenshot5](GFX/screenshot05_stats_header.png) | ![screenshot6](GFX/screenshot06_stats_references.png) |
 | le choix des tris | le tri des fiches ... |
-| ![screenshot7](gfx/screenshot07_sorting_fields.png) | ![screenshot8](gfx/screenshot08_sorting.png) |
+| ![screenshot7](GFX/screenshot07_sorting_fields.png) | ![screenshot8](GFX/screenshot08_sorting.png) |
 | le tri type défragmenteur ... | le transfert Xmodem ... |
-| ![screenshot9](gfx/screenshot09_sort_swapping.png) | ![screenshot10](gfx/screenshot10_xmodem_xfer.png) |
+| ![screenshot9](GFX/screenshot09_sort_swapping.png) | ![screenshot10](GFX/screenshot10_xmodem_xfer.png) |
 
 ## Status
 
