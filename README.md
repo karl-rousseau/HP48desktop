@@ -10,16 +10,17 @@ Ce vieux projet sous DOS a été fait à l'époque pour plusieurs raisons:
 - et il y avait beaucoup trop de manipulations pour enchaîner plusieurs fichiers à la suite
 
 ```
-Comme ELENDRIL et d'autres développeurs avaient sorti une lib HP48 pour faire des transferts en Xmodem alors
-je me suis décidé à inclure cette fonctionnalité sous DOS en PASCAL + ASM.
-A cette époque, je n'avais pas accès à un système de base de données alors je me suis créé mon propre format.
+Comme ELENDRIL et d'autres développeurs, avaient sorti une lib HP48 pour faire des transferts en Xmodem
+alors je me suis décidé à inclure cette fonctionnalité sous DOS en PASCAL + ASM.
+A cette époque, je n'avais pas accès à un système de base de données
+alors je me suis créé mon propre format.
 ```
 
 L'inspiration du moment était:
 - les écrans des BBS en ASCII ART sous l'éditeur d'écrans DOS [TheDraw](https://en.wikipedia.org/wiki/TheDraw), affichés via ANSI.SYS
 - le design ASCII des écrans avec "highlighted key shortcuts" à la sauce [Borland Turbo Vision](https://en.wikipedia.org/wiki/Turbo_Vision)
 - les [couleurs EGA](https://en.wikipedia.org/wiki/Enhanced_Graphics_Adapter) de l'époque en mode texte 80x25 ou 80x43
-- l'animation de tri des fiches de la base de données suivant la même logique que l'outil de défragmentation [DOS Norton Speed Disk](https://winworldpc.com/product/norton-utilities/50)
+- l'animation (ici de tri des fiches) suivant la même logique que l'outil de défragmentation [DOS Norton Speed Disk](https://winworldpc.com/product/norton-utilities/50)
 
 ## Fonctionnalités
 
